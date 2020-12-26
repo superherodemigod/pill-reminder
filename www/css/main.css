@@ -1,0 +1,84 @@
+a{
+    color: transparent;
+}
+#btn-area {
+  margin-top: 30px;
+}
+#reminder-items {
+  width: 100%;
+}
+.reminder-item {
+  -webkit-box-shadow: 1px 2px 1px -1px #a8a8a8;
+  box-shadow: 1px 2px 1px -1px #e9e8e8;
+  border-radius: 10px;
+  margin: 10px;
+  padding: inherit;
+}
+#btn-add {
+  border-radius: 10px;
+}
+#main-header {
+  height: 100px;
+}
+
+.fixed-header {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  color: red;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 1px 3px 5px -1px #726e6e;
+  box-shadow: 1px 3px 5px -1px #7e7b7b;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.fixed-header-top{
+    height: 80px;
+}
+.fixed-header-bottom{
+    background-color: #f8f8f8;
+    height:90px;
+    padding-top: 30px;
+}
+.reminder-list {
+  margin-top: 203px;
+  background-color: #e8e8e8;
+}
+div span{
+    width: 100%;
+    text-align: right;
+    margin-right: 5px;
+    font-size: 20px;
+}
+.btn-edit{
+    margin-top: 20px;
+    margin-left: 5px;
+    border-color: #1686C4;
+    color: #1686C4;
+    background-color: transparent;
+}
+#btn-add{
+    background: #1686C4;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.btn-date{
+    border-radius: 20px;
+    box-shadow: 1px 2px 1px -1px #e9e8e8;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn-date.active{
+    border-radius: 20px;
+    background-color: #1686C4;
+    color: white;
+    box-shadow: 1px 2px 1px -1px #e9e8e8;
+    font-size: 12px;
+    font-weight: bold;
+}

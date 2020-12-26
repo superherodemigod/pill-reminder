@@ -1,0 +1,39 @@
+
+/* reminder screen */
+.reminder-screen{
+    background-color: #f8f8f8;
+}
+.card{
+    border-radius: 10px;
+}
+.custom-item{
+    padding: 10px;
+}
+.custom-input{
+    padding-right: 0px;
+}
+.custom-item input{
+    padding-right: 30px !important;
+}
+.card-header{
+    text-align: center;
+    background-color: #1686C4;
+    color: white;
+    padding: 15px;
+}
+.custom-button{
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.custom-select{
+    border: none;
+    margin-left: 60%;
+    width: 100%;
+    margin-right: 30px;
+}
+.label-date{
+    /* margin-left: 60%; */
+    width: 100%;
+    text-align: right;
+    margin-right: 30px;
+}

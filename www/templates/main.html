@@ -1,0 +1,55 @@
+<!-- The title of the ion-view will be shown on the navbar -->
+<ion-view view-title="Main">
+  <ion-pane>
+    <div class="fixed-header">
+      <div class="fixed-header-top">
+        <div class="col col-60 col-offset-20">
+          <a href="#/add-reminder">
+            <button class="button button-full" id="btn-add">
+              Add Pill Reminder
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="fixed-header-bottom">
+        <button
+          class="button button-small btn-date"
+          ng-class="{active: date_id === date.id}"
+          ng-click="setActive(date.id)"
+          ng-repeat="date in dates"
+        >
+          {{date.value}}
+        </button>
+      </div>
+    </div>
+    <!-- <button class="button" ng-click="addNotification()">Add notification</button>
+    <button class="button" ng-click="isScheduled()">Is Scheduled</button> -->
+    <ion-content class="reminder-list">
+      <div class="row">
+        <div class="list" id="reminder-items">
+          <div class="item reminder-item" ng-repeat="data in showData">
+            <div class="row">
+              <div class="col col-25">
+                <a href="#/edit-reminder/{{data.id}}">
+                  <button class="button button-small btn-edit">
+                    Edit {{data.id}}
+                  </button>
+                </a>
+              </div>
+              <div class="col col-75">
+                <div class="row">
+                  <span>{{data.data.pillName}}</span>
+                  <i class="icon ion-beaker"></i>
+                </div>
+                <div class="row">
+                  <span>{{data.data.reminderTime}}</span>
+                  <i class="icon ion-compass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-view>

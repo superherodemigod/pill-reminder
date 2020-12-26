@@ -1,0 +1,29 @@
+/* Empty. Add your own CSS if you like */
+/* 
+.popup-container .popup {
+  width: 100%;
+  height: 90%;
+} */
+select::-ms-expand {
+  display: none;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* .inputtext {
+  border: 1px solid grey;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+} */
+
+.choices .choice {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  text-align: right;
+  padding-right: 55px;
+}

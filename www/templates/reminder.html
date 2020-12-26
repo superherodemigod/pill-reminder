@@ -1,0 +1,141 @@
+<ion-view view-title="Reminder">
+  <ion-pane class="reminder-screen">
+    <ion-content>
+      <div class="card">
+        <div class="item item-divider card-header">Pill Reminder</div>
+        <div class="item item-input custom-item">
+          <input
+            class="inputtext"
+            type="text"
+            id="pillName"
+            ng-model="pillName"
+            placeholder="Pill Name"
+            dir="rtl"
+            ng-keyup="filterItems()"
+          />
+          <i class="icon ion-beaker"></i>
+        </div>
+        <div class="choices" ng-show="isVisible.suggestions">
+          <div
+            class="choice"
+            ng-repeat="choice in filteredChoices"
+            ng-click="selectItem(choice.id)"
+          >
+            {{choice.label}}
+          </div>
+        </div>
+        <div class="item item-input custom-item">
+          <select
+            class="custom-select"
+            id="frequency"
+            ng-model="frequency"
+            dir="rtl"
+          >
+            <!-- <option selected>Frequency</option> -->
+            <option selected>Once Daily</option>
+            <option>Twice Daily</option>
+            <option>Third Daily</option>
+          </select>
+
+          <i class="icon ion-plus-circled"></i>
+        </div>
+        <div
+          class="item item-input custom-item"
+          ion-datetime-picker
+          only-valid="{'after': 'today', 'inclusive': true}"
+          date
+          ng-model="startDate"
+        >
+          <p class="label-date" id="startDate">
+            {{startDate| date: "yyyy-MM-dd"}}
+          </p>
+          <input
+            type="text"
+            placeholder="Start Date"
+            dir="rtl"
+            ng-show="!startDate"
+          />
+          <i class="icon ion-calendar"></i>
+        </div>
+
+        <div
+          class="item item-input custom-item"
+          ion-datetime-picker
+          only-valid="{'after': 'today', 'inclusive': true}"
+          date
+          ng-model="endDate"
+        >
+          <p class="label-date" id="endDate">{{endDate| date: "yyyy-MM-dd"}}</p>
+          <input
+            type="text"
+            placeholder="End Date"
+            dir="rtl"
+            ng-show="!endDate"
+          />
+          <i class="icon ion-calendar"></i>
+        </div>
+
+        <div
+          class="item item-input custom-item"
+          ion-datetime-picker
+          ng-model="reminderTime"
+          time
+          am-pm
+        >
+          <p class="label-date" id="reminderTime">
+            {{reminderTime| date: "H:mm"}}
+          </p>
+          <input
+            type="text"
+            placeholder="Reminder Time"
+            dir="rtl"
+            ng-show="!reminderTime"
+          />
+          <i class="icon ion-clock"></i>
+        </div>
+
+        <div class="item item-input custom-item">
+          <select
+            class="custom-select"
+            id="reminderSound"
+            ng-model="reminderSound"
+            dir="rtl"
+          >
+            <option selected>Sound1</option>
+            <option>Sound2</option>
+            <option>Sound3</option>
+            <option>Sound4</option>
+            <option>No Sound</option>
+            <option>Vibrate Only</option>
+          </select>
+          <i class="icon ion-speakerphone"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col btn-area">
+          <!-- <a href="/"> -->
+          <button
+            class="button button-full button-balanced custom-button"
+            ng-click="addReminder()"
+          >
+            Save
+          </button>
+          <!-- </a> -->
+          <a href="/">
+            <button class="button button-full button-calm custom-button">
+              Cancel
+            </button>
+          </a>
+          <!-- <a href="/"> -->
+          <button
+            class="button button-full button-assertive custom-button"
+            ng-click="deleteReminder()"
+          >
+            Delete
+          </button>
+          <!-- </a> -->
+        </div>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-view>
